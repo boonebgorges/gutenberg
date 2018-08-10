@@ -16,6 +16,7 @@
 
 	// Floats get an extra wrapping aside element, so the figure becomes a child.
 	// Resized images that are not floated, need the caption trick too.
+	&:not(.alignfull):not(.alignwide),
 	.alignleft,
 	.alignright,
 	.aligncenter,

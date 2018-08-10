@@ -12,12 +12,14 @@
 }
 
 // This is necessary for the editor resize handles to accurately work on a non floated small non resized image.
-.wp-block-image .wp-block-image__resizer {
-	display: inline-block;
+.wp-block-image {
+	.wp-block-image__resizer {
+		display: inline-block;
 
-	img {
-		display: block;
-		height: 100%;
+		img {
+			display: block;
+			width: 100%;
+		}
 	}
 }
 
@@ -134,7 +136,7 @@
 }
 
 // This is similar to above but for resized unfloated images only, where the markup is different.
-[data-type="core/image"] .editor-block-list__block-edit figure.is-resized {
+[data-type="core/image"] .editor-block-list__block-edit figure:not(.alignfull):not(.alignwide) {
 	margin: 0;
 	display: table;
 
